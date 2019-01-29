@@ -14,8 +14,7 @@ namespace AlwaysShowCellHints {
             InitData();
         }
         public void InitData() {
-            for(int i = 1; i <= 5; i++)
-                dataSet11.DataTable1.Rows.Add(i % 2, "Row " + i.ToString(), DateTime.Today, i / 3.0);
+            recordBindingSource.DataSource = DataHelper.GetData(10);
         }
 
         private void toolTipController1_GetActiveObjectInfo(object sender, ToolTipControllerGetActiveObjectInfoEventArgs e) {
@@ -25,7 +24,7 @@ namespace AlwaysShowCellHints {
                 if(info.InRowCell) {
                     string text = view.GetRowCellDisplayText(info.RowHandle, info.Column);
                     string cellKey = info.RowHandle.ToString() + " - " + info.Column.ToString();
-                    e.Info = new DevExpress.Utils.ToolTipControlInfo(cellKey, text);
+                    e.Info = new ToolTipControlInfo(cellKey, text);
                 }
             }
         }
