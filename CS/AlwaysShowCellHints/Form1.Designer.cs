@@ -24,14 +24,18 @@ namespace AlwaysShowCellHints {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet11 = new AlwaysShowCellHints.DataSet1();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.recordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colBoolProperty1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStringProperty1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCurrentDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDoubleProperty1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colParentID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colText = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colInfo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colValue = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colState = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colImage = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDetail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             this.advBandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -39,26 +43,15 @@ namespace AlwaysShowCellHints {
             this.colStringProperty = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colCurrentDate = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colDoubleProperty = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.dataSet11;
-            // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.dataTable1BindingSource;
+            this.gridControl1.DataSource = this.recordBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView2;
@@ -70,47 +63,85 @@ namespace AlwaysShowCellHints {
             this.gridView2,
             this.advBandedGridView1});
             // 
+            // recordBindingSource
+            // 
+            this.recordBindingSource.DataSource = typeof(AlwaysShowCellHints.Record);
+            // 
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colBoolProperty1,
-            this.colStringProperty1,
-            this.colCurrentDate1,
-            this.colDoubleProperty1});
+            this.colID,
+            this.colParentID,
+            this.colText,
+            this.colInfo,
+            this.colValue,
+            this.colDt,
+            this.colState,
+            this.colImage,
+            this.colDetail});
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
             // 
-            // colBoolProperty1
+            // colID
             // 
-            this.colBoolProperty1.Caption = "BoolProperty";
-            this.colBoolProperty1.FieldName = "BoolProperty";
-            this.colBoolProperty1.Name = "colBoolProperty1";
-            this.colBoolProperty1.Visible = true;
-            this.colBoolProperty1.VisibleIndex = 0;
+            this.colID.FieldName = "ID";
+            this.colID.Name = "colID";
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 0;
             // 
-            // colStringProperty1
+            // colParentID
             // 
-            this.colStringProperty1.Caption = "StringProperty";
-            this.colStringProperty1.FieldName = "StringProperty";
-            this.colStringProperty1.Name = "colStringProperty1";
-            this.colStringProperty1.Visible = true;
-            this.colStringProperty1.VisibleIndex = 1;
+            this.colParentID.FieldName = "ParentID";
+            this.colParentID.Name = "colParentID";
+            this.colParentID.Visible = true;
+            this.colParentID.VisibleIndex = 1;
             // 
-            // colCurrentDate1
+            // colText
             // 
-            this.colCurrentDate1.Caption = "CurrentDate";
-            this.colCurrentDate1.FieldName = "CurrentDate";
-            this.colCurrentDate1.Name = "colCurrentDate1";
-            this.colCurrentDate1.Visible = true;
-            this.colCurrentDate1.VisibleIndex = 2;
+            this.colText.FieldName = "Text";
+            this.colText.Name = "colText";
+            this.colText.Visible = true;
+            this.colText.VisibleIndex = 2;
             // 
-            // colDoubleProperty1
+            // colInfo
             // 
-            this.colDoubleProperty1.Caption = "DoubleProperty";
-            this.colDoubleProperty1.FieldName = "DoubleProperty";
-            this.colDoubleProperty1.Name = "colDoubleProperty1";
-            this.colDoubleProperty1.Visible = true;
-            this.colDoubleProperty1.VisibleIndex = 3;
+            this.colInfo.FieldName = "Info";
+            this.colInfo.Name = "colInfo";
+            this.colInfo.Visible = true;
+            this.colInfo.VisibleIndex = 3;
+            // 
+            // colValue
+            // 
+            this.colValue.FieldName = "Value";
+            this.colValue.Name = "colValue";
+            this.colValue.Visible = true;
+            this.colValue.VisibleIndex = 4;
+            // 
+            // colDt
+            // 
+            this.colDt.FieldName = "Dt";
+            this.colDt.Name = "colDt";
+            this.colDt.Visible = true;
+            this.colDt.VisibleIndex = 5;
+            // 
+            // colState
+            // 
+            this.colState.FieldName = "State";
+            this.colState.Name = "colState";
+            this.colState.Visible = true;
+            this.colState.VisibleIndex = 6;
+            // 
+            // colImage
+            // 
+            this.colImage.FieldName = "Image";
+            this.colImage.Name = "colImage";
+            this.colImage.Visible = true;
+            this.colImage.VisibleIndex = 7;
+            // 
+            // colDetail
+            // 
+            this.colDetail.FieldName = "Detail";
+            this.colDetail.Name = "colDetail";
             // 
             // toolTipController1
             // 
@@ -137,6 +168,7 @@ namespace AlwaysShowCellHints {
             this.gridBand1.Columns.Add(this.colCurrentDate);
             this.gridBand1.Columns.Add(this.colDoubleProperty);
             this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
             this.gridBand1.Width = 464;
             // 
             // colBoolProperty
@@ -180,11 +212,10 @@ namespace AlwaysShowCellHints {
             this.Controls.Add(this.gridControl1);
             this.Name = "Form1";
             this.Text = "How to force the Grid to show a hint for a cell even if the cell\'s content is com" +
-                "pletely visible";
+    "pletely visible";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -192,9 +223,6 @@ namespace AlwaysShowCellHints {
         }
 
         #endregion
-
-        private DataSet1 dataSet11;
-        private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView advBandedGridView1;
@@ -203,11 +231,17 @@ namespace AlwaysShowCellHints {
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colStringProperty;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colCurrentDate;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colDoubleProperty;
-        private DevExpress.XtraGrid.Columns.GridColumn colBoolProperty1;
-        private DevExpress.XtraGrid.Columns.GridColumn colStringProperty1;
-        private DevExpress.XtraGrid.Columns.GridColumn colCurrentDate1;
-        private DevExpress.XtraGrid.Columns.GridColumn colDoubleProperty1;
         private DevExpress.Utils.ToolTipController toolTipController1;
+        private System.Windows.Forms.BindingSource recordBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colID;
+        private DevExpress.XtraGrid.Columns.GridColumn colParentID;
+        private DevExpress.XtraGrid.Columns.GridColumn colText;
+        private DevExpress.XtraGrid.Columns.GridColumn colInfo;
+        private DevExpress.XtraGrid.Columns.GridColumn colValue;
+        private DevExpress.XtraGrid.Columns.GridColumn colDt;
+        private DevExpress.XtraGrid.Columns.GridColumn colState;
+        private DevExpress.XtraGrid.Columns.GridColumn colImage;
+        private DevExpress.XtraGrid.Columns.GridColumn colDetail;
     }
 }
 
