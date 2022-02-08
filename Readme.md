@@ -7,7 +7,7 @@
 # Data Grid for Windows Forms - How to show tooltips for grid cells even if their content is completely visible
 
 The [ToolTipController](https://docs.devexpress.com/WindowsForms/DevExpress.Utils.ToolTipController) component allows you to manage tooltips for DevExpress Windows Forms controls. 
-This example handles the [GetActiveObjectInfo](https://docs.devexpress.com/WindowsForms/DevExpress.Utils.ToolTipController.GetActiveObjectInfo) event to forcibly display tooltips for grid cells even if cell content is not trimmed. The event handler checks if the `e.Info` event parameter is `null`, and the mouse pointer is over a grid cell. In this case, the code creates a tooltip object for the hovered cell.
+This example handles the [ToolTipController.GetActiveObjectInfo](https://docs.devexpress.com/WindowsForms/DevExpress.Utils.ToolTipController.GetActiveObjectInfo) event to forcibly display tooltips for grid cells even if cell content is not trimmed. The event handler checks if the `e.Info` event parameter is `null`, and the mouse pointer is over a grid cell. In this case, the code creates a tooltip object for the hovered cell.
 
 <!-- default file list -->
 ## Files to Look At
