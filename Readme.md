@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# WinForms Data Grid - How to display tooltips for grid cells even if cell content is completely visible
+# WinForms Data Grid - How to display tooltips for grid cells if cell content is completely visible
 
 The [ToolTipController](https://docs.devexpress.com/WindowsForms/DevExpress.Utils.ToolTipController) component allows you to manage tooltip behavior for DevExpress Windows Forms UI controls. 
 
