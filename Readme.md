@@ -10,6 +10,8 @@ The [ToolTipController](https://docs.devexpress.com/WindowsForms/DevExpress.Util
 
 This example handles the [ToolTipController.GetActiveObjectInfo](https://docs.devexpress.com/WindowsForms/DevExpress.Utils.ToolTipController.GetActiveObjectInfo) event to forcibly display tooltips for grid cells with non-trimmed content (value). The event handler creates and initializes a tooltip object if the `e.Info` event parameter is `null` and the mouse pointer is over a grid cell.
 
+![Display Tooltips for WinForms Data Grid Cells](https://github.com/DevExpress-Examples/winforms-grid-forcibly-show-cell-tooltips/blob/13.1.4%2B/media/winforms-grid-tooltips.png)
+
 <!-- default file list -->
 ## Files to Review
 * [Form1.cs](./CS/AlwaysShowCellHints/Form1.cs) (VB: [Form1.vb](./VB/AlwaysShowCellHints/Form1.vb))
