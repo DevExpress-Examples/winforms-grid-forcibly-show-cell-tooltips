@@ -23,7 +23,7 @@ This example handles the [ToolTipController.GetActiveObjectInfo](https://docs.de
 * [ToolTipController.GetActiveObjectInfo](https://docs.devexpress.com/WindowsForms/DevExpress.Utils.ToolTipController.GetActiveObjectInfo)
 * [Data Grid Tooltips](https://docs.devexpress.com/WindowsForms/3512/controls-and-libraries/data-grid/data-grid-tooltips)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-grid-forcibly-show-cell-tooltips&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-grid-forcibly-show-cell-tooltips&~~~was_helpful=no)
 
